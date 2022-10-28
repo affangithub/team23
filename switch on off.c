@@ -18,33 +18,50 @@ sbit sw7 =P2^6;
 sbit sw8 =P2^7;
 
 
-#define LEDS P1
+
 
 main()
 {
 	int i;
 	sw1=1;
+	sw2=1;
+	sw3=1;
+	sw4=1;
+	sw5=1;
+	sw6=1;
+	sw7=1;
+	sw8=1;
 	
 	while(1)
 	{
 
- n=0x80;
-
-		
-		if(sw1==0)
+		for(i=1;i<=8;i++)
 		{
 			
-	  for(p=0;p<8;p++)
-	  { 
-		  LEDS=n^(0xFF);
-	
-		  n= n>>1;
-		  for(i=0;i<0x7ff;i++); 
+		if(sw1==0)
+			sw1=0;
+		else if(sw2==0)
+			sw2=0;
+		else if(sw3==0)
+			sw3=0;
+		else if(sw4==0)
+		sw4=0;
+		else if(sw5==0)
+			sw5=0;
+		else if(sw6==0)
+			sw6=0;
+		else if(sw7==0)
+			sw7=0;
+		else if(sw8==0)
+			sw8=0;
 		
 		
-		}
+		
+		
+			
 
-	}
 	
-}
+	
+    }
+  }
 }
